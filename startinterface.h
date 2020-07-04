@@ -8,19 +8,24 @@
 class StartInterface
 {
 public:
-    StartInterface() : speed(35) {
-        startsnake.emplace_back(Point(0,14));//Ã‰ÃŸ
+    StartInterface() : speed(40) {
+        startsnake.emplace_back(Point(0,14));//ÉßÒÆ¶¯¶¯»­
         startsnake.emplace_back(Point(1,14));
+        startsnake.emplace_back(Point(2,14));
         startsnake.emplace_back(Point(2,15));
-        startsnake.emplace_back(Point(3,16));
+        startsnake.emplace_back(Point(2,16));
+        startsnake.emplace_back(Point(2,17));
+        startsnake.emplace_back(Point(2,18));
+        startsnake.emplace_back(Point(3,18));
+        startsnake.emplace_back(Point(4,18));
         startsnake.emplace_back(Point(4,17));
-        startsnake.emplace_back(Point(5,18));
-        startsnake.emplace_back(Point(6,17));
-        startsnake.emplace_back(Point(7,16));
-        startsnake.emplace_back(Point(8,15));
-        startsnake.emplace_back(Point(9,14));
+        startsnake.emplace_back(Point(4,16));
+        startsnake.emplace_back(Point(4,15));
+        startsnake.emplace_back(Point(4,14));
+        startsnake.emplace_back(Point(5,14));
+        startsnake.emplace_back(Point(6,14));
 
-        textsnake.emplace_back(Point(-26, 14));//S
+        textsnake.emplace_back(Point(-26, 14));//S×ÖÄ¸
         textsnake.emplace_back(Point(-25, 14));
         textsnake.emplace_back(Point(-27, 15));
         textsnake.emplace_back(Point(-26, 16));
@@ -28,7 +33,7 @@ public:
         textsnake.emplace_back(Point(-27, 18));
         textsnake.emplace_back(Point(-26, 18));
 
-        textsnake.emplace_back(Point(-23, 14));//N
+        textsnake.emplace_back(Point(-23, 14));//N×ÖÄ¸
         textsnake.emplace_back(Point(-23, 15));
         textsnake.emplace_back(Point(-23, 16));
         textsnake.emplace_back(Point(-23, 17));
@@ -42,7 +47,7 @@ public:
         textsnake.emplace_back(Point(-19, 17));
         textsnake.emplace_back(Point(-19, 18));
 
-        textsnake.emplace_back(Point(-17, 18));//A
+        textsnake.emplace_back(Point(-16, 18));//A×ÖÄ¸
         textsnake.emplace_back(Point(-16, 17));
         textsnake.emplace_back(Point(-15, 16));
         textsnake.emplace_back(Point(-14, 15));
@@ -53,9 +58,10 @@ public:
         textsnake.emplace_back(Point(-12, 16));
         textsnake.emplace_back(Point(-11, 16));
         textsnake.emplace_back(Point(-10, 17));
-        textsnake.emplace_back(Point(-9, 18));
+        textsnake.emplace_back(Point(-10, 18));
 
-        textsnake.emplace_back(Point(-7, 14));//K
+
+        textsnake.emplace_back(Point(-7, 14));//K×ÖÄ¸
         textsnake.emplace_back(Point(-7, 15));
         textsnake.emplace_back(Point(-7, 16));
         textsnake.emplace_back(Point(-7, 17));
@@ -66,7 +72,8 @@ public:
         textsnake.emplace_back(Point(-4, 14));
         textsnake.emplace_back(Point(-4, 18));
 
-        textsnake.emplace_back(Point(-2, 14));//E
+
+        textsnake.emplace_back(Point(-2, 14));//E×ÖÄ¸
         textsnake.emplace_back(Point(-2, 15));
         textsnake.emplace_back(Point(-2, 16));
         textsnake.emplace_back(Point(-2, 17));
@@ -85,8 +92,8 @@ public:
     void ClearText();
     void Action();
 private:
-    std::deque<Point> startsnake;//å¼€å§‹åŠ¨ç”»ä¸­çš„è›‡
-    std::vector<Point> textsnake;//å¼€å§‹åŠ¨ç”»ä¸­çš„æ–‡å­—
-    int speed;//åŠ¨ç”»çš„é€Ÿåº¦
+    std::deque<Point> startsnake;//¿ªÊ¼¶¯»­ÖÐµÄÉß
+    std::vector<Point> textsnake;//¿ªÊ¼¶¯»­ÖÐµÄ×Ö·û
+    int speed;//¶¯»­µÄËÙ¶È
 };
 #endif // STRATINTERFACE_H
