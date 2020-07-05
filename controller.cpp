@@ -33,9 +33,9 @@ void Controller::Select()//选择界面
     SetCursorPosition(13, 27);
     std::cout << "                          " ;
     SetCursorPosition(6, 21);
-    std::cout << "请选择游戏难度：" ;
+    std::cout << "请选择游戏模式（难度）：" ;
     SetCursorPosition(6, 22);
-    std::cout << "(上下键选择,回车确认)" ;
+    std::cout << "(使用上下键进行选择,回车确认)" ;
     SetCursorPosition(27, 22);
     SetBackColor();//第一个选项设置背景色以表示当前选中
     std::cout << "简单模式" ;
@@ -205,7 +205,7 @@ void Controller::DrawGame()//绘制游戏界面
         break;
     }
     SetCursorPosition(31, 7);
-    std::cout << "得分：" ;
+    std::cout << "记分板：" ;
     SetCursorPosition(37, 8);
     std::cout << "     0" ;
     SetCursorPosition(33, 13);
