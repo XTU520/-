@@ -23,6 +23,16 @@ void StartInterface::PrintSecond()//蛇从左向右移动的过程
         startsnake.pop_front();
         Sleep(speed);
     }
+    for (int i = 30; i != 0; --i) //蛇头需要从10移动到40
+    {
+        /*计算蛇头的下一个位置，并将其压入startsnake中，绘制出来，将蛇尾去掉*/
+        int j = ( ((i-2)%8) < 4 )?( 15 + (i-2)%8 ) : ( 21 - (i-2)%8 );
+        startsnake.emplace_back( Point(i, j) );
+        startsnake.back().Print();
+        startsnake.front().Clear();
+        startsnake.pop_front();
+        Sleep(speed);
+    }
 }
 
 void StartInterface::PrintThird()//蛇从接触右边到消失的过程
@@ -51,7 +61,7 @@ void StartInterface::PrintText()
 
 void StartInterface::ClearText()
 {
-    for (auto& point : textsnake) //清除的同时将文字整体向右移动一格
+    for (auto& point : textsnake) //擦除屏幕已有文字同时将文字整体向右移动一格
     {
         if (point.GetX() >= 0)
             point.Clear();
