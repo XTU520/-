@@ -470,7 +470,7 @@ int Controller::GameOver()//游戏结束界面
     std::cout << " ┃                                          ┃" ;
     Sleep(30);
     SetCursorPosition(9, 11);
-    std::cout << " ┃              很遗憾！你挂了              ┃" ;
+    std::cout << " ┃            很遗憾！游戏结束！            ┃" ;
     Sleep(30);
     SetCursorPosition(9, 12);
     std::cout << " ┃                                          ┃" ;
@@ -493,7 +493,7 @@ int Controller::GameOver()//游戏结束界面
     std::cout << " ┃                                          ┃" ;
     Sleep(30);
     SetCursorPosition(9, 18);
-    std::cout << " ┃    嗯，好的        不了，还是学习有意思  ┃" ;
+    std::cout << " ┃            YES               NO          ┃" ;
     Sleep(30);
     SetCursorPosition(9, 19);
     std::cout << " ┃                                          ┃" ;
@@ -505,9 +505,9 @@ int Controller::GameOver()//游戏结束界面
     std::cout << "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" ;
 
     Sleep(100);
-    SetCursorPosition(12, 18);
+    SetCursorPosition(16, 18);
     SetBackColor();
-    std::cout << "嗯，好的" ;
+    std::cout << "YES" ;
     SetCursorPosition(0, 31);
 
     /*选择部分*/
@@ -521,12 +521,12 @@ int Controller::GameOver()//游戏结束界面
         case 75://LEFT
             if (tmp_key > 1)
             {
-                SetCursorPosition(12, 18);
+                SetCursorPosition(16, 18);
                 SetBackColor();
-                std::cout << "嗯，好的" ;
-                SetCursorPosition(20, 18);
+                std::cout << "YES" ;
+                SetCursorPosition(25, 18);
                 SetColor(11);
-                std::cout << "不了，还是学习有意思" ;
+                std::cout << "NO" ;
                 --tmp_key;
             }
             break;
@@ -534,12 +534,12 @@ int Controller::GameOver()//游戏结束界面
         case 77://RIGHT
             if (tmp_key < 2)
             {
-                SetCursorPosition(20, 18);
+                SetCursorPosition(25, 18);
                 SetBackColor();
-                std::cout << "不了，还是学习有意思" ;
-                SetCursorPosition(12, 18);
+                std::cout << "NO" ;
+                SetCursorPosition(16, 18);
                 SetColor(11);
-                std::cout << "嗯，好的" ;
+                std::cout << "YES" ;
                 ++tmp_key;
             }
             break;
