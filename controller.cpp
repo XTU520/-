@@ -8,14 +8,23 @@
 #include "map.h"
 #include "snake.h"
 #include "food.h"
+#include "openinganimation.h"
 
 void Controller::Start()//开始界面
 {
     SetWindowSize(41, 32);//设置窗口大小
-    SetColor(2);//设置开始动画颜色
+    
+    SetColor(6);//设置开始动画颜色
+    OpeningAnimation *open=new OpeningAnimation();//动态分配一个OpeningAnimation类
+    open->Information();
+
+    SetColor(6);
     StartInterface *start = new StartInterface();//动态分配一个StartInterface类start
     start->Action();//开始动画
     delete start;//释放内存空间
+
+    open->Information();
+    delete open;
 
     /*设置关标位置，并输出提示语，等待任意键输入结束*/
     SetCursorPosition(13, 26);
